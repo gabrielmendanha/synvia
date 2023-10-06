@@ -5,7 +5,7 @@ const Header = () => {
   return (
         <Navbar>
             <Logo>
-                <img src={'logo.avif'} alt={'synvia logo'} />
+                <img src={'assets/logo.avif'} alt={'synvia logo'} />
             </Logo>
         </Navbar>
   )
