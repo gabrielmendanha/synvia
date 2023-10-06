@@ -6,9 +6,10 @@ export const Navbar = styled.div`
     display: flex;
     height: 15vh;
     justify-content: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100vw;
+    z-index: 10;
 `
 
 export const Logo = styled.div`
