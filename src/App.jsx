@@ -4,16 +4,32 @@ import { AppContainer, Wrapper } from './layout/appContainer'
 import Products from './features/productsList'
 import { ProductsContext } from './context/products'
 import useApp from './hooks/useApp'
+import Filters from './features/filters'
 
 function App () {
-  const { products, setProducts } = useApp()
+  const {
+    products,
+    setProducts,
+    filteredProducts,
+    setFilteredProducts,
+    categories
+  } = useApp()
 
   return (
         <div className="App">
             <Wrapper>
                 <Header />
-                <ProductsContext.Provider value={{ products, setProducts }}>
+                <ProductsContext.Provider
+                    value={{
+                      products,
+                      setProducts,
+                      filteredProducts,
+                      setFilteredProducts,
+                      categories
+                    }}
+                >
                     <AppContainer>
+                        <Filters />
                         <Products />
                     </AppContainer>
                 </ProductsContext.Provider>

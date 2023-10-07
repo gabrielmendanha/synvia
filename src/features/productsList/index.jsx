@@ -4,11 +4,11 @@ import Item from './components/item/item'
 import useProducts from './hook/useProducts'
 
 const Products = () => {
-  const { products, handleClick } = useProducts()
+  const { filteredProducts, handleClick } = useProducts()
 
   return (
         <Container>
-            {products?.map((product) => (
+            {filteredProducts?.map((product) => (
                 <Item
                     key={product.id}
                     id={product.id}

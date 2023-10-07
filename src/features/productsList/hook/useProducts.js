@@ -2,19 +2,22 @@ import { useContext } from 'react'
 import { ProductsContext } from 'context/products'
 
 const useProducts = () => {
-  const { products, setProducts } = useContext(ProductsContext)
+  const { filteredProducts, setFilteredProducts } =
+        useContext(ProductsContext)
 
   const handleClick = (productId) => {
-    const index = products.findIndex((product) => product.id === productId)
-    const item = products[index]
+    const index = filteredProducts.findIndex(
+      (product) => product.id === productId
+    )
+    const item = filteredProducts[index]
 
     item.isFavorite = !item.isFavorite
-    products[index] = item
+    filteredProducts[index] = item
 
-    setProducts([...products])
+    setFilteredProducts([...filteredProducts])
   }
 
-  return { products, handleClick }
+  return { filteredProducts, handleClick }
 }
 
 export default useProducts
