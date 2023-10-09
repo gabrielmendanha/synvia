@@ -5,7 +5,7 @@ import {
   FilterContainer,
   Label
 } from './styled'
-import useFilter from './hook/useFilter'
+import useFilter from './hook/useFilters'
 import {
   MenuItem,
   Select,
