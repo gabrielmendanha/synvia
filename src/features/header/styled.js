@@ -4,7 +4,7 @@ export const Navbar = styled.div`
     background-color: #fff;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     display: flex;
-    height: 15vh;
+    height: 150px;
     justify-content: center;
     position: sticky;
     top: 0;
